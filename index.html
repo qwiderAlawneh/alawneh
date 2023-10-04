@@ -4,7 +4,7 @@
     <title>Alawneh</title>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
+    <style>
         body {
             text-align: center;
             background-color: black;
@@ -13,11 +13,12 @@
             font-size: 16px;
         }
 
+
         button {
             background-color: green;
             color: white;
             border: none;
-            padding: 5px 10px;
+            padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -26,33 +27,39 @@
         button:hover {
             background-color: #0056b3;
         }
-
+		
         .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; /* Use flexbox to arrange images horizontally */
+            justify-content: center; /* Center images horizontally within the container */
+            align-items: center; /* Center images vertically within the container */
         }
 
         .image-container img {
-            margin: 10px;
-            width: 200px;
-            height: 300px;
-            object-fit: cover;
+            margin: 10px; /* Add some margin between images */
+            width: 200px; /* Set a fixed width for all images */
+            height: 300px; /* Set a fixed height for all images */
+            object-fit: cover; /* Preserve aspect ratio and cover the entire space */
         }
 
+        /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
         @media (max-width: 768px) {
             .image-container {
-                flex-direction: column;
+                flex-direction: column; /* Stack images vertically on smaller screens */
             }
         }
+		
+		
+		/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
 
-        /* Center the button */
-        #centerButtonA {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
+    button {
+        width: 100%; /* Make buttons full width on mobile devices */
+    }
+}
+
     </style>
 	
 </head>
@@ -79,7 +86,7 @@
     </div>
     
     <script>
-        var images = ["https://j.top4top.io/p_2824pxkzj1.jpg", "https://b.top4top.io/p_2833xwt7l1.png",'https://f.top4top.io/p_2833ihoqr1.jpg',"https://d.top4top.io/p_28330yqyn1.jpg", "https://c.top4top.io/p_28330zlg62.jpg","https://d.top4top.io/p_2833cdrxa3.jpg"]; // List of image filenames
+        var images = ["https://j.top4top.io/p_2824pxkzj1.jpg", "https://b.top4top.io/p_2833xwt7l1.png", "https://c.top4top.io/p_28330zlg62.jpg","https://d.top4top.io/p_2833cdrxa3.jpg"]; // List of image filenames
         var currentImageIndex = 0; // Current image index
 
         function showNextImage() {
@@ -88,49 +95,39 @@
             imageElement.src = images[currentImageIndex]; // Update the src attribute
         }
     </script>
-    
-    <div id="centerButtonA">
 
-<table>
-<tr>
-<th>
+<table></table>
 	   <audio id="myAudio1" controls style="display: none">
         <source src="https://ia801400.us.archive.org/34/items/duaa-ommy_001/002.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
     <button onclick="toggleAudio('myAudio1')">ان قلوبنا لتحزن</button>
-    </th>
-    <th>
+    
     <audio id="myAudio2" controls style="display: none">
         <source src="https://ia801906.us.archive.org/20/items/doaa-al-maiett/doaa-al-maiet-allahum-eghfir-lh.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
     <button onclick="toggleAudio('myAudio2')">اللهم اغفر له وارحمه</button>
-    </th>
- </tr>   
-	 <tr>   
-<th>
+    
+	
 <audio id="myAudio3" controls style="display: none">
         <source src="https://ia801906.us.archive.org/20/items/doaa-al-maiett/doaa-al-maiet-allahum-adkhlh-aljanna.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     
     <button onclick="toggleAudio('myAudio3')">اللهم ادخله الجنه</button>
-        </th>
-<th>
+        
+
 <audio id="myAudio4" controls style="display: none">
         <source src="https://ia801906.us.archive.org/20/items/doaa-al-maiett/doaa-al-maiet-allahum-eghfir-l-jamea-mwta.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
+    
     <button onclick="toggleAudio('myAudio4')">اللهم اغفر لجميع موتى المسلمين</button>	
-		    </th>
-            </tr>   
-
-    </table>
-
+		
+    
     <script>
         function toggleAudio(audioId) {
             var audio = document.getElementById(audioId);
@@ -141,7 +138,7 @@
             }
         }
          </script>
-		 </div>
+		 
 		 
 	
 	
