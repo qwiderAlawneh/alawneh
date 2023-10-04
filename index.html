@@ -2,8 +2,7 @@
 <html dir="ltr">
 <head>
     <title>Alawneh</title>
-	    <meta charset="UTF-8">
-
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -13,6 +12,7 @@
             font-family: Arial, sans-serif;
             font-size: 16px;
         }
+
 
         button {
             background-color: green;
@@ -27,14 +27,25 @@
         button:hover {
             background-color: #0056b3;
         }
+		
+        .image-container {
+            display: flex; /* Use flexbox to arrange images horizontally */
+            justify-content: center; /* Center images horizontally within the container */
+            align-items: center; /* Center images vertically within the container */
+        }
+
+        .image-container img {
+            margin: 10px; /* Add some margin between images */
+            width: 200px; /* Set a fixed width for all images */
+            height: 300px; /* Set a fixed height for all images */
+            object-fit: cover; /* Preserve aspect ratio and cover the entire space */
+        }
 
         /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
+            .image-container {
+                flex-direction: column; /* Stack images vertically on smaller screens */
             }
-
-            /* Adjust other styles as needed for smaller screens */
         }
     </style>
 	
@@ -47,15 +58,32 @@
     </div>
 	<br>
 	
-	
+	<!--
     <img src="https://j.top4top.io/p_2824pxkzj1.jpg" alt="Image">
 	<br>
 		<br>
+-->
 
 
 
-   
-	
+
+ <div class="image-container">
+        <img id="image" src="https://j.top4top.io/p_2824pxkzj1.jpg" alt="Image 1">
+        <button onclick="showNextImage()">>></button>
+    </div>
+    
+    <script>
+        var images = ["https://j.top4top.io/p_2824pxkzj1.jpg", "https://b.top4top.io/p_2833xwt7l1.png", "https://c.top4top.io/p_28330zlg62.jpg","https://d.top4top.io/p_2833cdrxa3.jpg"]; // List of image filenames
+        var currentImageIndex = 0; // Current image index
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through images
+            var imageElement = document.getElementById("image");
+            imageElement.src = images[currentImageIndex]; // Update the src attribute
+        }
+    </script>
+
+
 	   <audio id="myAudio1" controls style="display: none">
         <source src="https://ia801400.us.archive.org/34/items/duaa-ommy_001/002.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -102,17 +130,17 @@
 	
 	
 	
-    <div id="textDiv" style='border: solid 2px black; padding: 10px; margin-top: 20px; display: none;'>
-        <p style='font-size: 20px; text-align: right;'> اللهم أسكنه فسيح الجنان واغفر له يا رحمن وارحم يا رحيم وتجاوز عما تعلم يا عليم.  </p>
-        <p style='font-size: 20px; text-align: right;'>  اللهم إن رحمتك وسعت كل شيء فارحمه رحمة تطمئن بها نفسه وتقر به عينه. </p>
+    <div id="textDiv" style='border: solid 3px green; padding: 10px; margin-top: 20px; display: none;'>
+        <p style='font-size: 20px; text-align: right;'> اللهم أسكنه فسيح الجنان واغفر له يا رحمن وارحم يا رحيم وتجاوز عما تعلم يا عليم  </p>
+        <p style='font-size: 20px; text-align: right;'>  اللهم إن رحمتك وسعت كل شيء فارحمه رحمة تطمئن بها نفسه وتقر به عينه </p>
 		<p style='font-size: 20px; text-align: right;'> اللهم احشره مع المتقين إلي الرحمن وفدًا. اللهم احشره مع أصحاب اليمين واجعل تحيته سلام لك من أصحاب اليمين.  </p>
-		<p style='font-size: 20px; text-align: right;'> اللهم اجعله من الذين سعدوا في الجنة خالدين فيها ما دامت السماوات والأرض.  </p>
+		<p style='font-size: 20px; text-align: right;'> اللهم اجعله من الذين سعدوا في الجنة خالدين فيها ما دامت السماوات والأرض  </p>
 		<p style='font-size: 20px; text-align: right;'>اللهمّ املأ قبره بالرّضا، والنّور، والفسحة، والسّرور.   </p>
-		<p style='font-size: 20px; text-align: right;'> اللهمّ إنّا نتوسّل بك إليك، ونقسم بك عليك أن ترحمه ولا تعذّبه، وأن تثبّته عند السّؤال.  </p>
-		<p style='font-size: 20px; text-align: right;'>  اللهمّ إنّه في ذمّتك وحبل جوارك، فقِهِ فتنة القبر، وعذاب النّار، وأنت أهل الوفاء والحقّ، فاغفر له وارحمه، إنّك أنت الغفور الرّحيم. </p>
-		<p style='font-size: 20px; text-align: right;'> اللهم إنه كان مصلي لك، فثبنه على الصراط يوم تزل الأقدام. اللهم إنه كان صائم لك، فأدخله الجنة من باب الريان.  </p>
-		<p style='font-size: 20px; text-align: right;'> اللهم اغفر لحينا وميتنا وشاهدنا وغائبنا وصغيرنا وكبيرنا وذَكّرنَا وأنثانا.  </p>
-		<p style='font-size: 20px; text-align: right;'>  اللهم لا تحرمنا أجره ولا تضللنا بعده. </p>
+		<p style='font-size: 20px; text-align: right;'> اللهمّ إنّا نتوسّل بك إليك، ونقسم بك عليك أن ترحمه ولا تعذّبه، وأن تثبّته عند السّؤال  </p>
+		<p style='font-size: 20px; text-align: right;'>  اللهمّ إنّه في ذمّتك وحبل جوارك، فقِهِ فتنة القبر، وعذاب النّار، وأنت أهل الوفاء والحقّ، فاغفر له وارحمه، إنّك أنت الغفور الرّحيم </p>
+		<p style='font-size: 20px; text-align: right;'> اللهم إنه كان مصلي لك، فثبنه على الصراط يوم تزل الأقدام. اللهم إنه كان صائم لك، فأدخله الجنة من باب الريان  </p>
+		<p style='font-size: 20px; text-align: right;'> اللهم اغفر لحينا وميتنا وشاهدنا وغائبنا وصغيرنا وكبيرنا وذَكّرنَا وأنثانا </p>
+		<p style='font-size: 20px; text-align: right;'>  اللهم لا تحرمنا أجره ولا تضللنا بعده </p>
     </div>
     
        <script>
