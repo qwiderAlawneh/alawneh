@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-    <title>قويدر العلاونه</title>
-   <meta charset="UTF-8">
+    <title>قويدر العلاونه</title> 
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -48,32 +48,23 @@
             }
         }
     </style>
-	
 </head>
-
-
 <body>
     <div style='text-align:center; font-size: 40px;'>
        <b> المرحوم قويدر العلاونه</b>
     </div>
-	<br>
-	
-	<!--
-    <img src="https://j.top4top.io/p_2824pxkzj1.jpg" alt="Image">
-	<br>
-		<br>
--->
-
-
-
-
- <div class="image-container">
+    <br>
+    <div class="image-container">
         <img id="image" src="https://j.top4top.io/p_2824pxkzj1.jpg" alt="Image 1">
-        <button onclick="showNextImage()">>></button>
     </div>
-    
+
     <script>
-        var images = ["https://j.top4top.io/p_2824pxkzj1.jpg", "https://b.top4top.io/p_2833xwt7l1.png", "https://c.top4top.io/p_28330zlg62.jpg","https://d.top4top.io/p_2833cdrxa3.jpg"]; // List of image filenames
+        var images = [
+            "https://j.top4top.io/p_2824pxkzj1.jpg",
+            "https://b.top4top.io/p_2833xwt7l1.png",
+            "https://c.top4top.io/p_28330zlg62.jpg",
+            "https://d.top4top.io/p_2833cdrxa3.jpg"
+        ]; // List of image filenames
         var currentImageIndex = 0; // Current image index
 
         function showNextImage() {
@@ -81,6 +72,9 @@
             var imageElement = document.getElementById("image");
             imageElement.src = images[currentImageIndex]; // Update the src attribute
         }
+
+        // Automatically change the image every 3 seconds
+        setInterval(showNextImage, 5000);
     </script>
 
 
@@ -161,5 +155,6 @@
 
 	    <button onclick="showText()">دعاء مكتوب</button>
 
+   
 </body>
 </html>
